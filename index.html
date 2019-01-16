@@ -8,7 +8,6 @@ var xmlhttp= new XMLHttpRequest();
 xmlhttp.onreadystatechange=function(){
   if (this.readyState ==4 && this.status==200){
     //if data is ready, and status is ok, parse it and save as mydata
-    //var mydata.food[1].name;
     window.alert(mydata.food[1].name);
   }
 };
