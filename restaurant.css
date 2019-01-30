@@ -1,0 +1,39 @@
+#one{
+  width:300px;
+  height:250px;
+  background-color:#FFFF99;
+}
+  
+#two{
+  width:300px;
+  height:250px;
+  background-color:#CCFFFF;
+}
+
+#three{
+  width:300px;
+  height:250px;
+  background-color:#deeaee;
+  transform:translate(150%,-105%);
+
+}
+
+#four{
+  width:300px;
+  height:250px;
+  background-color:#f4e1d2;
+  
+}
+
+#five{
+  width:300px;
+  height:250px;
+  background-color:#fbefcc;
+}
+
+#six{
+  width:300px;
+  height:250px;
+  background-color:#fbefcc;
+  
+}
