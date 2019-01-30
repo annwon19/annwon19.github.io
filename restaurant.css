@@ -1,14 +1,24 @@
+#title{
+  font-family:"Times New Roman", Times, serif;
+  font-size:28px;
+  background-color:red;
+}
+
 #one{
   width:300px;
   height:250px;
+  font-size:20px;
+  font-family: "Courier", Times, serif;
   background-color:#FFFF99;
-  
+  margin:0;
 }
   
 #two{
   width:300px;
   height:250px;
   background-color:#deeaee;
+  font-family: "Courier", Times, serif;
+  font-size:20px;
   transform:translate(150%,-105%);
 
 }
@@ -17,26 +27,30 @@
   width:300px;
   height:250px;
   background-color:#fbefcc;
-  transform:translate(150%,-105%);
-
+  font-family: "Courier", Times, serif;
+  font-size:20px;
 }
 
 #four{
   width:300px;
   height:250px;
   background-color:#;
-  
+  transform:translate(150%,-105%);
+  font-family: "Courier", Times, serif;
 }
 
 #five{
   width:300px;
   height:250px;
   background-color:#;
+  transform:translate(150%,-105%);
+  font-family: "Courier", Times, serif;
 }
 
 #six{
   width:300px;
   height:250px;
   background-color:#;
-  
+  transform:translate(150%,-105%);
+  font-family: "Courier", Times, serif;
 }
