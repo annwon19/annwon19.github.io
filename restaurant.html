@@ -2,6 +2,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="restaurant.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src=".js"></script>
 <style>
  
 
@@ -54,11 +55,23 @@ var current=null;
     previous=current;
   });
   }2000);
-  
+
+var name=[];
+var price=[];
+var toppings=[];
+
+for (var i=0; i<mydata.ramen.length;+i++){
+  for.push(mydata.ramen[i].name);
+  for.push(mydata.ramen[i].price);
+  for.push(mydata.ramen[i].toppings);
+  //$.createElement('p');
+  text.createTextnode();
+
+}
 //add tax
 var tax=1.04712;
-var x=(//*tax).toFixed(2); //fix
-  document.getElementById('').innerHTML=("Your total is $"+" "+x)
+var price=((mydata.ramen[i].price)*tax).toFixed(2); //fix
+  document.getElementById('price').innerHTML=("Your total is $"+" "+price);
 
 </script>
 </body>
