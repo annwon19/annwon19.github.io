@@ -2,6 +2,10 @@
   font-family:"Times New Roman", Times, serif;
   font-size:28px;
   background-color:red;
+.center{
+  margin:auto;
+  
+}
 }
 
 #one{
@@ -19,7 +23,7 @@
   font-family: "Courier", Times, serif;
   font-size:20px;
   transform:translate(150%,-105%);
-
+  
 }
 
 #three{
