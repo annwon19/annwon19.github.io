@@ -2,10 +2,6 @@
   font-family:"Times New Roman", Times, serif;
   font-size:28px;
   background-color:red;
-.center{
-  margin:auto;
-  
-}
 }
 
 #one{
@@ -14,6 +10,8 @@
   font-size:20px;
   font-family: "Courier", Times, serif;
   background-color:#FFFF99;
+  position:relative;
+  top:10px;
 }
   
 #two{
@@ -23,7 +21,8 @@
   font-family: "Courier", Times, serif;
   font-size:20px;
   transform:translate(150%,-105%);
-  
+  position:relative;
+  top:22px;
 }
 
 #three{
@@ -32,6 +31,8 @@
   background-color:#fbefcc;
   font-family: "Courier", Times, serif;
   font-size:20px;
+  transform:translate(300%,-196%);
+  top:22px;
 }
 
 #four{

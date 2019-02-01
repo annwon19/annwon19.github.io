@@ -12,7 +12,7 @@
 <div>
   <div id="title">Ramen Menu</div>
   
-  <div id="one">Chicken Ramen</div>
+  <div id="one">
   <label for="number"></label>
    <select name="number" id="number">
      <option>1</option>
@@ -21,9 +21,29 @@
      <option>4</option>
      <option>5</option>
     </select>
-  <button onclick="buyNow()">Order</button>
+    <button onclick="buyNow()">Order</button></div>
   
-   <div id="two">Vegetable Ramen</div>
+   <div id="two">
+   <label for="number"></label>
+   <select name="number" id="number">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+     <option>5</option>
+    </select>
+  <button onclick="buyNow()">Order</button></div>
+  
+  <div id="three">
+   <label for="number"></label>
+   <select name="number" id="number">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+     <option>5</option>
+    </select>
+  <button onclick="buyNow()">Order</button></div>
 
 </div>
   <script>
@@ -45,7 +65,7 @@ xmlHttp.send();
 //reloads
 var previous=null;
 var current=null;
-  setInternal (function(){
+  setInternal function(){
     $.getJSON("restaurant.json"), function(json){
       current=JSON stringify(json);
       if (previous && current & previous !==current)
@@ -70,7 +90,7 @@ for (var i=0; i<mydata.ramen.length;+i++){
 //add tax
 var tax=1.04712;
 var price=((mydata.ramen[i].price)*tax).toFixed(2); //fix
-  document.getElementById('price').innerHTML=("Your total is $"+" "+price);
+  document.getElementById('buyNow').innerHTML=("Your total is $"+" "+price);
 
 </script>
 </body>
