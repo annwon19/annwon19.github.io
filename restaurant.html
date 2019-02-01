@@ -50,7 +50,6 @@
   
 //get JSON file
 var xmlhttp= new XXHttpRequest();
-
 xmlhttp.onreadystatechange=function(){
   if (this.readyState ==4 && this.status==200){
     //if data is ready, and status is ok, parse it and save as mydata
@@ -85,8 +84,8 @@ for (var i=0; i<mydata.ramen.length;+i++){
   for.push(mydata.ramen[i].toppings);
   //$.createElement('p');
   text.createTextnode();
-
 }
+
 //add tax
 var tax=1.04712;
 var price=((mydata.ramen[i].price)*tax).toFixed(2); //fix
