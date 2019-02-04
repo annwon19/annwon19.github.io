@@ -1,17 +1,17 @@
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="restaurant.css">
+  <link rel="stylesheet" href="restaurant.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="restaurant.js"></script>
-<style>
- 
-</style>
+  <script src=""></script>
 </head>
+
+
 <body>
 <div>
   <div id="title">Ramen Menu</div>
   
   <div id="one">
+  <p id="r1"></p>
   <label for="number"></label>
    <select name="number" id="number">
      <option>1</option>
@@ -60,6 +60,10 @@ xmlhttp.onreadystatechange=function(){
 var name=[];
 var price=[];
 var toppings=[];
+var rname;
+var rprice;
+var rtoppings;
+
 
 //get JSON file
 var xmlhttp= new XXHttpRequest();
@@ -73,10 +77,16 @@ xmlhttp.onreadystatechange=function(){
   toppings.push(mydata.ramen[i].toppings);
     //window.alert(mydata.name);
   }
-};
 
-xmlHttp.open("GET","restaurant.json",true);
-xmlHttp.send();
+
+rname=mydata.r[0].price.toppings;
+document.getElementById('r1').innerHTML="$"+mydata.r[0].price.toppings+"";
+
+}
+  };
+  
+xmlhttp.open("GET","restaurant.json",true);
+xmlhttp.send();
 
 var items[];
 
@@ -87,15 +97,15 @@ location.href="page2.html"
 //reloads
 var previous=null;
 var current=null;
-  setInternal function(){
+  setInternal (function(){
     $.getJSON("restaurant.json"), function(json){
       current=JSON stringify(json);
-      if (previous && current & previous !==current)
-      location reload();
+      if (previous && current && previous !==current){
+      location.reload();
     }
-    previous=current;
+    previous==current;
   });
-  }2000);
+  },2000);
   
 /*for (var i=0; i<mydata.ramen.length;+i++){
   for.push(mydata.ramen[i].name);
