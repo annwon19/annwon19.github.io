@@ -18,45 +18,51 @@
 #two{
   width:300px;
   height:250px;
-  background-color:#EAFFEF;
   font-family: "Courier New", Times, serif;
   font-size:20px;
   transform:translate(150%,-105%);
   position:relative;
-  top:20px;
+  top:10px;
   color:white;
 }
 
 #three{
   width:300px;
   height:250px;
-  background-color:#fbefcc;
   font-family: "Courier New", Times, serif;
   font-size:20px;
-  transform:translate(300%,-196%);
-  top:22px;
-}
-
-#four{
-  width:300px;
-  height:250px;
-  background-color:    deeaee;
-  transform:translate(150%,-105%);
-  font-family: "Courier", Times, serif;
+  transform:translate(300%,-207%);
+  top:10px;
+  color:white;
 }
 
 #five{
   width:300px;
   height:250px;
-  background-color:   FAE7EC;
-  transform:translate(150%,-105%);
-  font-family: "Courier", Times, serif;
+  transform:translate(150%,-325%);
+  font-family: "Courier New", Times, serif;
+  font-size:20px;
+  top:20px;
+  color:white;
+}
+
+#four{
+  width:300px;
+  height:250px;
+  font-family: "Courier New", Times, serif;
+   transform:translate(0%,-215%);
+  top:10px;
+  font-size:20px;
+  color:white;
 }
 
 #six{
   width:300px;
   height:250px;
-  background-color:    EEEEFF;
-  transform:translate(150%,-105%);
-  font-family: "Courier", Times, serif;
+  transform:translate(300%,-430%);
+  font-size:20px;
+  font-family: "Courier New", Times, serif;
+  color:white;
 }
+
+

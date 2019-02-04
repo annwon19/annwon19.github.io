@@ -1,18 +1,28 @@
 <html>
+  
 <head>
+  <style>
+ 
+   </style>
   <link rel="stylesheet" href="restaurant.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src=""></script>
+  <script src="restaurant.js"></script>
 </head>
-
-
+ 
 <body background="ramen.jpg">
+
   <div id="title">Ramen Menu</div>
   
   <div id="one">
   <p id="r1">Chicken Ramen</p>
    <label for="number"></label>
-   <input type="number" id="quantity">
+   <select name="number" id="number">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+     <option>5</option>
+    </select>
     <button onclick="order1()">Order</button></div>
   
    <div id="two">
@@ -39,10 +49,47 @@
     </select>
   <button onclick="order3()">Order</button></div>
 
+  <div id="four">
+   <p id="r4">Tonkotsu Ramen</p>
+   <label for="number"></label>
+   <select name="number" id="number">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+     <option>5</option>
+    </select>
+  <button onclick="order4()">Order</button></div>
+  
+  <div id="five">
+   <p id="r5">Shoyu Ramen</p>
+   <label for="number"></label>
+   <select name="number" id="number">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+     <option>5</option>
+    </select>
+  <button onclick="order5()">Order</button></div>
+  
+  <div id="six">
+   <p id="r6">Beef Ramen</p>
+   <label for="number"></label>
+   <select name="number" id="number">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+     <option>5</option>
+    </select>
+  <button onclick="order6()">Order</button></div>
+  <button onclick="total()">Check Out</button>
+  
 <div id="showOrder">
 <ul id="orderList"></ul>
 <p id="totalDisplay"></p>
-<button onclick="total()">Check Out</button>
+
 
   <script>
   
@@ -60,9 +107,9 @@ var ramenName=[];
 var ramenPrice=[];
 var ramenToppings=[];
 var total=[];
-var r0name;
+/*var r0name;
 var r0price;
-var r0toppings;
+var r0toppings;*/
 
 
 //get JSON file
@@ -78,20 +125,20 @@ xmlhttp.onreadystatechange=function(){
     //window.alert(mydata.name);
   }
 
-r0price=mydata.r[0].price;
-document.getElementById('r1').innerHTML="$"+mydata.r[0].price+".00";
-
+/*r0price=mydata.r[0].price;
+document.getElementById('r1').innerHTML="$"+mydata.r[0].price+"";
 }
-  };
+  };*/
   
 xmlhttp.open("GET","restaurant.json",true);
 xmlhttp.send();
 
-//var items[];
-  
-//var list= items.push("totalOrder")
-location.href="page2.html"
+var items[];
+function totalItems(){
+var list= items.push("orderList")
+location.href="page2.html";
 }
+
 //reloads
 var previous=null;
 var current=null;

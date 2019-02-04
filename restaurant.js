@@ -1,9 +1,10 @@
-var name=[];
-var price=[];
-var toppings=[];
-var rname;
-var rprice;
-var rtoppings;
+var ramenName=[];
+var ramenPrice=[];
+var ramenToppings=[];
+var total=[];
+var r0name;
+var r0price;
+var r0toppings;
 
 
 //get JSON file
@@ -13,16 +14,14 @@ xmlhttp.onreadystatechange=function(){
     //if data is ready, and status is ok, parse it and save as mydata
     var mydata=JSON.parse(this.responseText);
   for (var i=0; i<mydata.ramen.length;+i++){
-  name.push(mydata.ramen[i].name);
-  price.push(mydata.ramen[i].price);
-  toppings.push(mydata.ramen[i].toppings);
+  ramennName.push(mydata.ramen[i].name);
+  ramenPrice.push(mydata.ramen[i].price);
+  ramenToppings.push(mydata.ramen[i].toppings);
     //window.alert(mydata.name);
   }
 
-
-rname=mydata.r[0].price.toppings;
-document.getElementById('r1').innerHTML="$"+mydata.r[0].price.toppings+"";
-
+r0price=mydata.r[0].price;
+document.getElementById('r1').innerHTML="$"+mydata.r[0].price+"";
 }
   };
   
@@ -30,11 +29,11 @@ xmlhttp.open("GET","restaurant.json",true);
 xmlhttp.send();
 
 var items[];
-
-function buyNow(){
-//var list= items.push("totalOrder")
-location.href="page2.html"
+function totalItems(){
+var list= items.push("orderList")
+location.href="page2.html";
 }
+
 //reloads
 var previous=null;
 var current=null;
@@ -47,4 +46,3 @@ var current=null;
     previous==current;
   });
   },2000);
-  
