@@ -6,23 +6,17 @@
 </head>
 
 
-<body>
-<div>
+<body background="ramen.jpg">
   <div id="title">Ramen Menu</div>
   
   <div id="one">
-  <p id="r1"></p>
-  <label for="number"></label>
-   <select name="number" id="number">
-     <option>1</option>
-     <option>2</option>
-     <option>3</option>
-     <option>4</option>
-     <option>5</option>
-    </select>
-    <button onclick="buyNow()">Order</button></div>
+  <p id="r1">Chicken Ramen</p>
+   <label for="number"></label>
+   <input type="number" id="quantity">
+    <button onclick="order1()">Order</button></div>
   
    <div id="two">
+   <p id="r2">Vegetable Ramen</p>
    <label for="number"></label>
    <select name="number" id="number">
      <option>1</option>
@@ -31,9 +25,10 @@
      <option>4</option>
      <option>5</option>
     </select>
-  <button onclick="buyNow()">Order</button></div>
+  <button onclick="order2()">Order</button></div>
   
   <div id="three">
+   <p id="r3">Miso Ramen</p>
    <label for="number"></label>
    <select name="number" id="number">
      <option>1</option>
@@ -42,9 +37,13 @@
      <option>4</option>
      <option>5</option>
     </select>
-  <button onclick="buyNow()">Order</button></div>
+  <button onclick="order3()">Order</button></div>
 
-</div>
+<div id="showOrder">
+<ul id="orderList"></ul>
+<p id="totalDisplay"></p>
+<button onclick="total()">Check Out</button>
+
   <script>
   
 //get JSON file
@@ -57,12 +56,13 @@ xmlhttp.onreadystatechange=function(){
   }
 };*/
   
-var name=[];
-var price=[];
-var toppings=[];
-var rname;
-var rprice;
-var rtoppings;
+var ramenName=[];
+var ramenPrice=[];
+var ramenToppings=[];
+var total=[];
+var r0name;
+var r0price;
+var r0toppings;
 
 
 //get JSON file
@@ -72,15 +72,14 @@ xmlhttp.onreadystatechange=function(){
     //if data is ready, and status is ok, parse it and save as mydata
     var mydata=JSON.parse(this.responseText);
   for (var i=0; i<mydata.ramen.length;+i++){
-  name.push(mydata.ramen[i].name);
-  price.push(mydata.ramen[i].price);
-  toppings.push(mydata.ramen[i].toppings);
+  ramennName.push(mydata.ramen[i].name);
+  ramenPrice.push(mydata.ramen[i].price);
+  ramenToppings.push(mydata.ramen[i].toppings);
     //window.alert(mydata.name);
   }
 
-
-rname=mydata.r[0].price.toppings;
-document.getElementById('r1').innerHTML="$"+mydata.r[0].price.toppings+"";
+r0price=mydata.r[0].price;
+document.getElementById('r1').innerHTML="$"+mydata.r[0].price+".00";
 
 }
   };
@@ -88,9 +87,8 @@ document.getElementById('r1').innerHTML="$"+mydata.r[0].price.toppings+"";
 xmlhttp.open("GET","restaurant.json",true);
 xmlhttp.send();
 
-var items[];
-
-function buyNow(){
+//var items[];
+  
 //var list= items.push("totalOrder")
 location.href="page2.html"
 }
@@ -115,11 +113,7 @@ var current=null;
   text.createTextnode();
 }*/
 
-//add tax
-var tax=1.04712;
-var price=((mydata.ramen[i].price)*tax).toFixed(2); //fix
-  document.getElementById('buyNow').innerHTML=("Your total is $"+" "+price);
-  
 </script>
+</div>
 </body>
 </html>

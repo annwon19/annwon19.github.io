@@ -1,5 +1,5 @@
 #title{
-  font-family:"Times New Roman", Times, serif;
+  font-family:"Courier", Times, serif;
   font-size:28px;
   background-color:red;
 }
@@ -8,28 +8,30 @@
   width:300px;
   height:250px;
   font-size:20px;
-  font-family: "Courier", Times, serif;
-  background-color:#FFFF99;
+  font-family: "Courier New", Times, serif;
+  background-color:visible;
   position:relative;
   top:10px;
+  color:white;
 }
   
 #two{
   width:300px;
   height:250px;
-  background-color:#deeaee;
-  font-family: "Courier", Times, serif;
+  background-color:#EAFFEF;
+  font-family: "Courier New", Times, serif;
   font-size:20px;
   transform:translate(150%,-105%);
   position:relative;
-  top:22px;
+  top:20px;
+  color:white;
 }
 
 #three{
   width:300px;
   height:250px;
   background-color:#fbefcc;
-  font-family: "Courier", Times, serif;
+  font-family: "Courier New", Times, serif;
   font-size:20px;
   transform:translate(300%,-196%);
   top:22px;
@@ -38,7 +40,7 @@
 #four{
   width:300px;
   height:250px;
-  background-color:#;
+  background-color:    deeaee;
   transform:translate(150%,-105%);
   font-family: "Courier", Times, serif;
 }
@@ -46,7 +48,7 @@
 #five{
   width:300px;
   height:250px;
-  background-color:#;
+  background-color:   FAE7EC;
   transform:translate(150%,-105%);
   font-family: "Courier", Times, serif;
 }
@@ -54,7 +56,7 @@
 #six{
   width:300px;
   height:250px;
-  background-color:#;
+  background-color:    EEEEFF;
   transform:translate(150%,-105%);
   font-family: "Courier", Times, serif;
 }

@@ -1,15 +1,24 @@
 <html>
   <head>
     <script src="index.html"></script>
+   
     <style>
-      #box
-        background-color:white;
-        width:600px;
-        border-radius:;
-        font-family:"Courier New";
-        font-size:20px;
+      #box{
+        background-color:visible;
+        width:500px;
+        height:300px;
+        font-family:"Couriers",Times, serif;
+        font-size:25px;
+        color:white;
+      }
     </style>
-    </head>
-    <h1 id="total">Total Amount</h1>
-  
+     </head>
+     <body background="ramen.jpg">
+   <div id="box">Total Amount:</div>
+  <script>
+  var tax=1.04712;
+  var price=((mydata.ramen[i].price)*tax).toFixed(2);
+  document.getElementById('total').innerHTML=("Your total is $"+" "+price);
+ </script>
+ </body>
 </html>
