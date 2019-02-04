@@ -1,41 +1,50 @@
+var name=[];
+var price=[];
+var toppings=[];
+var rname;
+var rprice;
+var rtoppings;
+
+
 //get JSON file
 var xmlhttp= new XXHttpRequest();
-
 xmlhttp.onreadystatechange=function(){
   if (this.readyState ==4 && this.status==200){
     //if data is ready, and status is ok, parse it and save as mydata
     var mydata=JSON.parse(this.responseText);
-    window.alert(mydata.name);
-  }
-};
-
-xmlHttp.open("GET","restaurant.json",true);
-xmlHttp.send();
-
-//reloads
-/*var previous=null;
-var current=null;
-  setInternal (function(){
-  $.getJSON("restaurant.json"),function (json) {
-    current=JSON stringify(json);
-    if (previous && current & previous !==current){
-    location reload();
-    }
-    previous=current;
-  });
-  }2000); */
-
-var price=[];
-var toppings=[];
-
-for (i=0; i<mydata.ramen.length; i++){
+  for (var i=0; i<mydata.ramen.length;+i++){
   name.push(mydata.ramen[i].name);
   price.push(mydata.ramen[i].price);
   toppings.push(mydata.ramen[i].toppings);
-  //$.createElement('p');
-  text.createTextnode();
+    //window.alert(mydata.name);
+  }
+
+
+rname=mydata.r[0].price.toppings;
+document.getElementById('r1').innerHTML="$"+mydata.r[0].price.toppings+"";
+
 }
-//add tax
-var tax=1.04712;
-var price=((mydata.ramen[i].price)*tax).toFixed(2); //fix
-  document.getElementById('buyNow').innerHTML=("Your total is $"+" "+price);
+  };
+  
+xmlhttp.open("GET","restaurant.json",true);
+xmlhttp.send();
+
+var items[];
+
+function buyNow(){
+//var list= items.push("totalOrder")
+location.href="page2.html"
+}
+//reloads
+var previous=null;
+var current=null;
+  setInternal (function(){
+    $.getJSON("restaurant.json"), function(json){
+      current=JSON stringify(json);
+      if (previous && current && previous !==current){
+      location.reload();
+    }
+    previous==current;
+  });
+  },2000);
+  
